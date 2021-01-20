@@ -16,13 +16,13 @@ class LegendaryItemInventoryManagerTest {
         val quality = item.quality
 
         // Assert
-        Assertions.assertTrue(quality in ItemConfig.QUALITY_RANGE)
+        Assertions.assertEquals(ItemConfig.SULFURAS_QUALITY, quality)
 
         repeat(days) {
             // Act
             InventoryManager.updateItem(item)
             // Assert
-            Assertions.assertEquals(quality, item.quality)
+            Assertions.assertEquals(ItemConfig.SULFURAS_QUALITY, item.quality)
         }
     }
 }

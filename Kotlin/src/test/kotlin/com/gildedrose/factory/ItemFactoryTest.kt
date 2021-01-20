@@ -40,7 +40,7 @@ class ItemFactoryTest {
     fun `the itemfactory returns an item with the expected name when requested a sulfurasItem`() {
 
         // Arrange and Act
-        val item = ItemFactory.createSulfurasItem(0,0)
+        val item = ItemFactory.createSulfurasItem(0)
 
         // Assert
         Assertions.assertEquals(ItemTypes.sulfuras, item.name)
