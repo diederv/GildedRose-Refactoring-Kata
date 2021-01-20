@@ -1,7 +1,6 @@
 package com.gildedrose.item
 
 import com.gildedrose.Item
-import com.gildedrose.factory.ItemFactory
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

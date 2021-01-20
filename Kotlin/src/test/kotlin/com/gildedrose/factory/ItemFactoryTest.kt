@@ -11,6 +11,7 @@ class ItemFactoryTest {
 
         // Arrange and Act
         val item = ItemFactory.createAgedBrieItem(0,0)
+
         // Assert
         Assertions.assertEquals(ItemTypes.agedBrie, item.name)
     }
@@ -20,6 +21,7 @@ class ItemFactoryTest {
 
         // Arrange and Act
         val item = ItemFactory.createBackstagePassItem(0,0)
+
         // Assert
         Assertions.assertEquals(ItemTypes.backstagePasses, item.name)
     }
@@ -29,6 +31,7 @@ class ItemFactoryTest {
 
         // Arrange and Act
         val item = ItemFactory.createConjuredItem(0,0)
+
         // Assert
         Assertions.assertEquals(ItemTypes.conjured, item.name)
     }
@@ -38,6 +41,7 @@ class ItemFactoryTest {
 
         // Arrange and Act
         val item = ItemFactory.createSulfurasItem(0,0)
+
         // Assert
         Assertions.assertEquals(ItemTypes.sulfuras, item.name)
     }

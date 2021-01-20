@@ -5,7 +5,7 @@ import com.gildedrose.factory.ItemFactory
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class BackstagePassBaseInventoryManagerTest {
+class BackstagePassInventoryManagerTest {
 
     @Test
     fun `when the updated and decreased sellIn is less than zero then the quality is set to zero`() {

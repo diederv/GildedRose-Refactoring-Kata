@@ -1,6 +1,7 @@
 package com.gildedrose.factory
 
 import com.gildedrose.Item
+import com.gildedrose.config.ItemConfig
 import com.gildedrose.config.ItemTypes
 
 class ItemFactory {
@@ -27,11 +28,10 @@ class ItemFactory {
 
         /*
         * @param sellIn the number of day before the advised selling day, which for Sulfuras is meaningless
-        * @param quality the quality of the product
         * @returns the Item with the reserved name for Sulfuras
         */
-        fun createSulfurasItem(sellIn: Int, quality: Int): Item {
-            return Item(ItemTypes.sulfuras, sellIn, quality)
+        fun createSulfurasItem(sellIn: Int): Item {
+            return Item(ItemTypes.sulfuras, sellIn, ItemConfig.SULFURAS_QUALITY)
         }
 
         /*

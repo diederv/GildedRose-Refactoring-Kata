@@ -5,10 +5,10 @@ import com.gildedrose.factory.ItemFactory
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class DeterioratingItemBaseInventoryManagerTest {
+class ConjuredItemInventoryManagerTest {
 
     @Test
-    fun `when the updated and decreased sellIn is less than zero then the quality is decreased by two within the range (1)`() {
+    fun `when the updated and decreased sellIn is less than zero then the quality is decreased by four within the range (1)`() {
 
         // Arrange
         val quality = 10
@@ -19,11 +19,11 @@ class DeterioratingItemBaseInventoryManagerTest {
         InventoryManager.updateItem(item)
 
         // Assert
-        Assertions.assertEquals(quality -2, item.quality)
+        Assertions.assertEquals(quality -4, item.quality)
     }
 
     @Test
-    fun `when the updated and decreased sellIn is less than zero then the quality is decreased by two within the range (2)`() {
+    fun `when the updated and decreased sellIn is less than zero then the quality is decreased by four within the range (2)`() {
 
         // Arrange
         val quality = 0
@@ -38,7 +38,7 @@ class DeterioratingItemBaseInventoryManagerTest {
     }
 
     @Test
-    fun `when the updated and decreased sellIn is zero or more then the quality is decreased by one within the range (1)`() {
+    fun `when the updated and decreased sellIn is zero or more then the quality is decreased by two within the range (1)`() {
 
         // Arrange
         val quality = 10
@@ -49,11 +49,11 @@ class DeterioratingItemBaseInventoryManagerTest {
         InventoryManager.updateItem(item)
 
         // Assert
-        Assertions.assertEquals(quality -1, item.quality)
+        Assertions.assertEquals(quality -2, item.quality)
     }
 
     @Test
-    fun `when the updated and decreased sellIn is zero or more then the quality is decreased by one within the range (2)`() {
+    fun `when the updated and decreased sellIn is zero or more then the quality is decreased by two within the range (2)`() {
 
         // Arrange
         val quality = 0

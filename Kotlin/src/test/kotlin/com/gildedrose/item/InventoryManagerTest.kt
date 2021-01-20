@@ -16,7 +16,7 @@ class InventoryManagerTest {
         )
 
         // Assert
-        Assertions.assertTrue(inventoryManager is AgedBrieBaseInventoryManager)
+        Assertions.assertTrue(inventoryManager is AgedBrieInventoryManager)
     }
 
     @Test
@@ -28,7 +28,7 @@ class InventoryManagerTest {
         )
 
         // Assert
-        Assertions.assertTrue(inventoryManager is BackstagePassBaseInventoryManager)
+        Assertions.assertTrue(inventoryManager is BackstagePassInventoryManager)
     }
 
     @Test
@@ -64,6 +64,6 @@ class InventoryManagerTest {
         )
 
         // Assert
-        Assertions.assertTrue(inventoryManager is DeterioratingItemBaseInventoryManager)
+        Assertions.assertTrue(inventoryManager is DeterioratingItemInventoryManager)
     }
 }

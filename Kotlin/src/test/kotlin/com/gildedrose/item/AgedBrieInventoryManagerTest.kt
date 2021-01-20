@@ -5,7 +5,7 @@ import com.gildedrose.factory.ItemFactory
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class AgedBrieBaseInventoryManagerTest {
+class AgedBrieInventoryManagerTest {
 
     @Test
     fun `update after any number of days should increase quality with that same number if within the QUALITY_RANGE`() {
@@ -34,7 +34,6 @@ class AgedBrieBaseInventoryManagerTest {
         val item = ItemFactory.createAgedBrieItem(99, initialQuality)
         val days = 12
 
-
         // Act
         repeat(days) {
             InventoryManager.updateItem(item)
@@ -46,5 +45,4 @@ class AgedBrieBaseInventoryManagerTest {
         Assertions.assertTrue(expectedUnlimitedQuality !in ItemConfig.QUALITY_RANGE)
         Assertions.assertEquals(ItemConfig.QUALITY_RANGE.last, item.quality)
     }
-
 }

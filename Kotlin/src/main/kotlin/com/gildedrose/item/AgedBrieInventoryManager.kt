@@ -6,7 +6,7 @@ import com.gildedrose.config.ItemConfig
 /*
  * The InventoryManager that updates the sellIn and quality for AgedBrie
  */
-class AgedBrieBaseInventoryManager : BaseInventoryManager() {
+class AgedBrieInventoryManager : BaseInventoryManager() {
 
     override fun updateItemQuality(item: Item) {
         item.updateQuality()

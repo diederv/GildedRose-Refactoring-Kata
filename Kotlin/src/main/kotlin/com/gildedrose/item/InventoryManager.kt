@@ -10,15 +10,15 @@ class InventoryManager : BaseInventoryManager() {
 
     companion object {
 
-        private val backstagePassInventoryManager = BackstagePassBaseInventoryManager()
-        private val agedBrieInventoryManager = AgedBrieBaseInventoryManager()
+        private val backstagePassInventoryManager = BackstagePassInventoryManager()
+        private val agedBrieInventoryManager = AgedBrieInventoryManager()
         private val conjuredItemInventoryManager = ConjuredItemInventoryManager()
-        private val deterioratingItemInventoryManager = DeterioratingItemBaseInventoryManager()
+        private val deterioratingItemInventoryManager = DeterioratingItemInventoryManager()
         private val timelessItemInventoryManager = LegendaryItemInventoryManager()
 
         val instance = InventoryManager()
 
-        private fun getInventoryManager(item: Item): BaseInventoryManager {
+        internal fun getInventoryManager(item: Item): BaseInventoryManager {
             return when (item.name) {
                 ItemTypes.backstagePasses -> backstagePassInventoryManager
                 ItemTypes.agedBrie -> agedBrieInventoryManager

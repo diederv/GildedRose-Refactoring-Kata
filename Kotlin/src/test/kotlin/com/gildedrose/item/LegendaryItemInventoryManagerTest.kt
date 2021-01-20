@@ -10,11 +10,10 @@ class LegendaryItemInventoryManagerTest {
     @Test
     fun `when the sellIn is updated with any value then the quality remains the same`() {
 
-        val quality = 10
-
         // Arrange
         val days = 20
-        val item = ItemFactory.createSulfurasItem(10, quality)
+        val item = ItemFactory.createSulfurasItem(10)
+        val quality = item.quality
 
         // Assert
         Assertions.assertTrue(quality in ItemConfig.QUALITY_RANGE)
